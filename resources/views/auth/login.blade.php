@@ -1,4 +1,7 @@
 <x-head>
-    <!--- HTML kalian di sini, ya --->
-
+    <!--- HTML k{{  }}n di sini, ya --->
+ <div>
+    sign in
+ </div>
+ 
 </x-head>

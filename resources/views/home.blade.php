@@ -36,7 +36,7 @@
         <section>
             <div class="flex items-center box-border">
                 <div class="flex justify-center w-[100%]">
-                    <h2 class="font-bold text text-2xl mb-4 max-md:text-[16px]">🔥Top <span class="bg-red-600 text-white px-2">10</span> This Week</h2>
+                    <h2 class="font-bold text text-2xl mb-4 max-md:text-[16px]">Top <span class="bg-red-600 text-white px-2">10</span> This Week</h2>
                 </div>
                 <a href="" class="mb-4 opacity-60 hover:opacity-100 transition-opacity">More...</a>
             </div>
@@ -69,7 +69,7 @@
                     <x-sport-category-card src="{{ asset('image/Placeholder/Image.png') }}" :link="$link='./'">Basketball</x-sport-category-card>
                     <x-sport-category-card src="{{ asset('image/Placeholder/Image.png') }}" :link="$link='./'">Skateboard</x-sport-category-card>
                 </div>
-                <div class="flex justify-between mb-6  gap-6">
+                <div class="flex justify-between mb-6 gap-6">
                     <x-sport-category-card src="{{ asset('image/Placeholder/Image.png') }}" :link="$link='./'">Gym</x-sport-category-card>
                     <x-sport-category-card src="{{ asset('image/Placeholder/Image.png') }}" :link="$link='./'">Tennis</x-sport-category-card>
                     <x-sport-category-card src="{{ asset('image/Placeholder/Image.png') }}" :link="$link='./'">Dance</x-sport-category-card>
@@ -81,7 +81,7 @@
             <div class="text-center mb-10">
                 <h3 class="new-shoe-text-outline text-black font-black text-6xl ">New Shoe</h3>
             </div>
-            <div class="py-4">
+            <div class="my-4 shadow-2xl">
                 <div class="bg-[#e6e6e6] w-[100%] h-[25vw] min-h-40 flex justify-between orange-shape-new-shoe">
                     <div class="w-[50%] flex justify-center items-center">
                         <img src="{{ asset('image/blitzkreiger/vecteezy_shoes-isolated-on-transparent-background_19953791 (1) 1.png') }}" alt="New Shoe" class="w-[100%] scale-110 max-xl:translate-x-[50%]" />

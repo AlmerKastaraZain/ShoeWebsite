@@ -4,9 +4,14 @@ var previousScrollPosition = 0;
 
 
 window.addEventListener('scroll', function() {
-    if (this.scrollY > previousScrollPosition) {
-        if (this.scrollY > (navElement.offsetHeight)) {
-            PushNavToTop();
+    if (this.scrollY > previousScrollPosition && scrollY > (navElement.offsetHeight))
+    {
+        PushNavToTop();
+        if (shoppingCartIsActive) {
+            ResetShoppingCartList();
+        }
+        if (favoriteListIsActive) {
+            ResetFavoriteList();
         }
     } 
     else 

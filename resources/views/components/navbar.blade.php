@@ -46,13 +46,14 @@
                     <path d="M11.875 33.25C13.1867 33.25 14.25 32.1867 14.25 30.875C14.25 29.5633 13.1867 28.5 11.875 28.5C10.5633 28.5 9.5 29.5633 9.5 30.875C9.5 32.1867 10.5633 33.25 11.875 33.25Z"/>
                     <path d="M27.7083 33.25C29.02 33.25 30.0833 32.1867 30.0833 30.875C30.0833 29.5633 29.02 28.5 27.7083 28.5C26.3966 28.5 25.3333 29.5633 25.3333 30.875C25.3333 32.1867 26.3966 33.25 27.7083 33.25Z"/>
                 </svg>    
-                <div id="shoppingCartList" class="invisible absolute top-0 right-0 w-[60vw] max-w-[600px] min-w-[250px] bg-gray-100 translate-y-10 p-4 rounded-md">
-                    <h4 class="text-center font-bold">Your Shopping Cart</h4>
+                <div id="shoppingCartList" class="invisible absolute top-0 right-0 w-[60vw] max-h-[800px] overflow-y-scroll max-w-[600px] min-w-[250px] bg-gray-100 translate-y-10 p-4 rounded-md">
+                    <h4 class="text-center font-bold text-xl mb-3">Your Shopping Cart</h4>
+                    <x-shopping-card-nav src="{{ asset('image/Placeholder/Image.png') }}" :title="$title='Shoe'" :type="$type='type'" :price="$price='das'">ADSA</x-shopping-card-nav>
                 </div>                
             </div>
             <script src="{{ asset('js/shoppingCart.js') }}" defer></script>
         </div>
-        <button id="sidebarBtn">
+        <button class="hover:opacity-50" id="sidebarBtn">
             <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
                 <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
