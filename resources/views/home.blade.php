@@ -1,4 +1,4 @@
-<x-head>
+<x-layout>
         <section>
             <div class="flex justify-center mt-3 mb-8">
                 <video class="w-[1200px]" autoplay muted loop>
@@ -123,4 +123,4 @@
                 }
             </style>
         </section>
-</x-head>
+</x-layout>

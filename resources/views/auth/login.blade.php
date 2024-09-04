@@ -1,7 +1,7 @@
-<x-head>
-    <!--- HTML k{{  }}n di sini, ya --->
+<x-layout>
+    <!--- HTML kan di sini, ya --->
  <div>
     sign in
  </div>
  
-</x-head>
+</x-layout>

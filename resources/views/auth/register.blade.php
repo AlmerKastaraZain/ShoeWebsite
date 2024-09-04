@@ -1,4 +1,4 @@
-<x-head>
+<x-layout>
     <!--- HTML kalian di sini, ya --->
 
-</x-head>
+</x-layout>
