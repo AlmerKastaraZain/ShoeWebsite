@@ -30,16 +30,15 @@ function HideLoading() {
     websiteContentElement.classList.remove('overflow-hidden');
 }
 
+
 function load() {
+
     window.setTimeout(load => {
         loadingScreenEndAnimation()
+        loadingScreenElement.classList.remove('invisible')
     }, 100)
 }
-
-
-window.addEventListener('load', () => {
-    load();
-});
+load();
 
 let loadingLogo = gsap.timeline({
     yoyo: true,

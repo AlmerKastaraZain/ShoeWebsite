@@ -14,7 +14,7 @@ Route::get('/shop/search/', [StoreController::class, 'search'])->name('shop.sear
 Route::get('/shop/id/{shoe-id}', [StoreController::class, 'show'])->name('shop.show');
 
 Route::middleware('auth')->group(function () {
-    Route::delete('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
 
