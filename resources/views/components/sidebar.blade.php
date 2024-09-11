@@ -31,19 +31,31 @@
     </a>
     <div class="w-[80%]">
         <h3 class="text-center font-black text-[24px]">Shoes</h3>
-        <ol class="[&>a>li]:mt-2 [&>a>li]:outline [&>a>li]:outline-1 [&>a>li]:outline-black [&>a>li]:py-2 [&>a>li]:pl-4 [&>a>li]:bg-gray-200">
-            <a href="">
-                <li class="transition-all hover:translate-x-2 hover:bg-blue-500 hover:text-white">New & Featured</li>
-            </a>
-            <a href="">
-                <li class="transition-all hover:translate-x-2 hover:bg-blue-500 hover:text-white">Mens</li>
-            </a>
-            <a href="">
-                <li class="transition-all hover:translate-x-2 hover:bg-blue-500 hover:text-white">Women</li>
-            </a>
-            <a href="">
-                <li class="transition-all hover:translate-x-2 hover:bg-blue-500 hover:text-white">Kids</li>
-            </a>
+        <ol class="[&>form>button>li]:mt-2 [&>form>button>li]:outline [&>form>button>li]:outline-1 [&>form>button>li]:outline-black [&>form>button>li]:py-2 [&>form>button>li]:pl-4 [&>form>button>li]:bg-gray-200">
+            <form action="{{ Route('shop.search') }}" method="get">
+                @csrf
+                <button name='new' value="new" class="w-[100%] h-[100%] text-left">
+                    <li  class="transition-all hover:translate-x-2 hover:bg-blue-500 hover:text-white">New & Featured</li>
+                </button>
+            </form>
+            <form action="{{ Route('shop.search') }}" method="get">
+                @csrf
+                <button name='mens' value="mens" class="w-[100%] h-[100%] text-left">
+                    <li  class="transition-all hover:translate-x-2 hover:bg-blue-500 hover:text-white">Mens</li>
+                </button>
+            </form>
+            <form action="{{ Route('shop.search') }}" method="get">
+                @csrf
+                <button name='women' value="women" class="w-[100%] h-[100%] text-left">
+                    <li  class="transition-all hover:translate-x-2 hover:bg-blue-500 hover:text-white">Women</li>
+                </button>
+            </form>
+            <form action="{{ Route('shop.search') }}" method="get">
+                @csrf
+                <button name='kids' value="kids" class="w-[100%] h-[100%] text-left">
+                    <li  class="transition-all hover:translate-x-2 hover:bg-blue-500 hover:text-white">Kids</li>
+                </button>
+            </form>
         </ol>
     </div>
     <div class="w-[80%]">

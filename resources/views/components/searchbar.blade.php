@@ -2,7 +2,8 @@
     <button id="exitBtnSearchbar" class="p-2 [&>img]:hover:-translate-x-2 [&>img]:hover:opacity-80">
         <img class="transition-transform" src="{{ asset('icon/go-back-arrow-svgrepo-com.svg') }}" width="24px" />
     </button>
-    <form class="w-[80vw] flex items-center justify-center" action="" method="get">
-        <input class="bg-gray-200 rounded-3xl h-8 searchbar w-[80vw] ml-16" type="search" name="search" id="searchbarFull">
+    <form class="w-[80vw] flex items-center justify-center" action="/shop/search" method="get">
+        @csrf
+        <input name="find" class="bg-gray-200 rounded-3xl h-8 searchbar w-[80vw] ml-16" type="search" name="search" id="searchbarFull">
     </form>
 </div>

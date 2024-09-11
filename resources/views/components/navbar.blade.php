@@ -17,16 +17,32 @@
             </defs>
         </svg>
     </a>
-    
-    <form method="GET" action="/shop">
-        @csrf
-        <ol class="flex justify-center gap-10 items-center max-xl:hidden">
-            <li class="overflow-hidden h-8"><a href=" {{ route('shop.index')}} " class="before:content-[''] before:w-[100%] before:hover:translate-x-[0%] before:translate-x-[-100%] before:transition-transform relative before:absolute before:border-t-2 before:h-0 before:border-black before:top-6" href="">New & Featured</a></li>
-            <li class="overflow-hidden h-8"><a href=" {{ route('shop.index')}} " class="before:content-[''] before:w-[100%] before:hover:translate-x-[0%] before:translate-x-[-100%] before:transition-transform relative before:absolute before:border-t-2 before:h-0 before:border-black before:top-6" href="">Mens</a></li>
-            <li class="overflow-hidden h-8"><a href=" {{ route('shop.index')}} " class="before:content-[''] before:w-[100%] before:hover:translate-x-[0%] before:translate-x-[-100%] before:transition-transform relative before:absolute before:border-t-2 before:h-0 before:border-black before:top-6" href="">Women</a></li>
-            <li class="overflow-hidden h-8"><a href=" {{ route('shop.index')}} " class="before:content-[''] before:w-[100%] before:hover:translate-x-[0%] before:translate-x-[-100%] before:transition-transform relative before:absolute before:border-t-2 before:h-0 before:border-black before:top-6" href="">Kids</a></li>
-        </ol>
-    </form>
+    <ol class="flex justify-center gap-10 items-center max-xl:hidden">
+        <form action="{{ Route('shop.search') }}" method="get">
+            @csrf
+            <li class="overflow-hidden h-8">
+                <button name="new" value="new" class="before:content-[''] before:w-[100%] before:hover:translate-x-[0%] before:translate-x-[-100%] before:transition-transform relative before:absolute before:border-t-2 before:h-0 before:border-black before:top-6" href="">New & Featured</button>
+            </li>
+        </form>
+        <form action="{{ Route('shop.search') }}" method="get">
+            @csrf
+            <li class="overflow-hidden h-8">
+                <button name="mens" value="mens" class="before:content-[''] before:w-[100%] before:hover:translate-x-[0%] before:translate-x-[-100%] before:transition-transform relative before:absolute before:border-t-2 before:h-0 before:border-black before:top-6" href="">Mens</button>
+            </li>    
+        </form>
+        <form action="{{ Route('shop.search') }}" method="get">
+            @csrf
+            <li class="overflow-hidden h-8">
+                <button name="women" value="women" class="before:content-[''] before:w-[100%] before:hover:translate-x-[0%] before:translate-x-[-100%] before:transition-transform relative before:absolute before:border-t-2 before:h-0 before:border-black before:top-6" href="">Women</button>
+            </li>
+        </form>
+        <form action="{{ Route('shop.search') }}" method="get">
+            @csrf
+            <li class="overflow-hidden h-8">
+                <button name="kids" value="kids" class="before:content-[''] before:w-[100%] before:hover:translate-x-[0%] before:translate-x-[-100%] before:transition-transform relative before:absolute before:border-t-2 before:h-0 before:border-black before:top-6" href="">Kids</button>
+            </li>
+        </form>
+    </ol>
     <div class="flex gap-6">
         <div class="flex gap-6" >
             <input class="bg-gray-200 rounded-3xl h-8 searchbar max-sm:hidden" type="search" name="search" id="searchbar">

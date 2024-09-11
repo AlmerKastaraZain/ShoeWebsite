@@ -11,9 +11,10 @@ class Shoe extends Model
 
     protected $fillable = [
         'name',
+        'brand',
+        'collection',
         'price',
         'stock',
-        'type_id',
         'attributes',
     ];
 }

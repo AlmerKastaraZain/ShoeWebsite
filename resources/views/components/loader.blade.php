@@ -23,7 +23,7 @@
             </div>
         </div>
     </div>    
-    <script type="modulez" src="{{ asset('js/loader.js') }}"></script>
+    <script type="module" src="{{ asset('js/loader.js') }}"></script>
     <div>
         {{ $slot }}
     </div>

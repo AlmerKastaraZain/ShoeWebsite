@@ -1,3 +1,4 @@
+<x-head>
 <x-layout>
         <section>
             <div class="flex justify-center mt-3 mb-8">
@@ -27,9 +28,9 @@
             </div>
             <div class="flex gap-6 justify-between pb-4">
                 <div class="flex justify-between w-[100%] gap-2">
-                    <x-card-brand :link="$link = './s'" src="{{ asset('image/ShoesBrand/Brand1.png') }}">Max Pro</x-card-brand>
-                    <x-card-brand :link="$link = './s'" src="{{ asset('image/ShoesBrand/Brand2.png') }}">Sigma Male</x-card-brand>
-                    <x-card-brand :link="$link = './s'" src="{{ asset('image/ShoesBrand/Brand3.png') }}">Drip Skibidi</x-card-brand>
+                    <x-card-brand :link="$link = '{{  }}'" src="{{ asset('image/ShoesBrand/Brand1.png') }}">Max Pro</x-card-brand>
+                    <x-card-brand :link="$link = '{{  }}'" src="{{ asset('image/ShoesBrand/Brand2.png') }}">Sigma Male</x-card-brand>
+                    <x-card-brand :link="$link = '{{  }}'" src="{{ asset('image/ShoesBrand/Brand3.png') }}">Drip Skibidi</x-card-brand>
                 </div>
             </div>
         </section>
@@ -124,3 +125,4 @@
             </style>
         </section>
 </x-layout>
+</x-head>

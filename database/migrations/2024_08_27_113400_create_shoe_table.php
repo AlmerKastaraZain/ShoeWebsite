@@ -11,18 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('shoe_type', function (Blueprint $table) {
-            $table->increments('id')->primary();
-            $table->string('type', 64)->unique();
-        });
-
         //  TODO: Might add some stuff like review n other stuff...
-        Schema::create('shoe', function (Blueprint $table) {
+        Schema::create('shoes', function (Blueprint $table) {
             $table->increments('id')->primary();
             $table->string('name', 128)->unique();
+            $table->string('brand', 128);
+            $table->string('collection', 128);
             $table->double('price');
             $table->integer('stock');
-            $table->foreign('id')->references('id')->on('shoe_type')->cascadeOnDelete();
             $table->json('attributes');
             $table->timestamps();
         });
@@ -33,7 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('shoe');
-        Schema::dropIfExists('shoe_type');
+        Schema::dropIfExists('shoes');
     }
 };

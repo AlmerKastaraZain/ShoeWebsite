@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Shoe;
 use App\Models\shop;
 use Illuminate\Http\Request;
+use Nette\Utils\Strings;
 
 class StoreController extends Controller
 {
@@ -31,6 +33,39 @@ class StoreController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    /**
+    * Display the specified resource.
+    */
+
+    // Dummy 
+    // $shoes = Shoe::create([
+    //     'name' => 'Shoes',
+    //     'brand' => 'Awake',
+    //     'collection' => 'ShoesCollection',
+    //     'price' => '10000',
+    //     'stock' => '10',
+    //     'attributes' => '{
+    //         "gender": "female",
+    //         "kids": "False",
+    //         "sale":"False",
+    //         "shoe_height": "low",
+    //         "width": "regular",
+    //         "sport": "football",
+    //         "feature": [
+    //         "spikeless",
+    //         "water-resistant",
+    //         "waterproof"
+    //         ]
+    //     }'
+    // ]);
+    public function search(Request $request)
+    {
+        $attribute = $request->except('_token');
+        $shoes = Shoe::get('*');
+        
+        return View('shop.search', ['attribute' => $attribute, 'shoes' => $shoes]);
     }
 
     /**

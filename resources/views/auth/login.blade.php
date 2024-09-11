@@ -1,7 +1,9 @@
+<x-head>
 <x-layout>
     <!--- HTML kan di sini, ya --->
  <div>
-    sign in
+tesss
  </div>
  
-</x-layout>
+</x-layout>{{  }}
+</x-head>
