@@ -24,38 +24,54 @@
 
                 <form action="/login" method="post">
                     @csrf
-                    <div class="flex flex-col w-[80vw] max-w-[600px] gap-4">
-                        <label for="username" class="-mb-2 ml-2">Username / Email</label>
-                        <input class="
-                            @error('username')
-                                outline-red-600 outline-2 outline border-none
-                            @enderror
-                            border text-[16px] border-black px-4 py-4 rounded-lg" type="text" placeholder="Username or Email..." name="username" id="">
+                </form>
+                <div class="flex flex-col w-[80vw] max-w-[600px] gap-4">
+                    <label for="username" class="-mb-2 ml-2">Username / Email</label>
+                    <input class="
                         @error('username')
-                            <p class="text-red-600 -mt-2 ml-2">{{ $message }}</p>
+                            outline-red-600 outline-2 outline border-none
                         @enderror
-
-                        <label for="password" class="-mb-2 ml-2">Password</label>
-                        <div class="relative flex items-center">
-                            <input id="passwordInput" class="
-                            @error('password')
-                                outline-red-600 outline-2 outline border-none
-                            @enderror
-                            border text-[16px] border-black w-[100%] px-4 py-4 rounded-lg" type="password" placeholder="Password..." name="password" id="">
-                            <img id="passwordShowBtn" class="h-6 absolute right-6 cursor-pointer" src="{{ asset('/icon/EyeClosed.svg') }}" />
-                        </div>
+                        border text-[16px] border-black px-4 py-4 rounded-lg" type="text" placeholder="Username or Email..." name="username" id="usernameInput">
+                    @error('username')
+                        <p class="text-red-600 -mt-2 ml-2">{{ $message }}</p>
+                    @enderror
+                    <label for="password" class="-mb-2 ml-2">Password</label>
+                    <div class="relative flex items-center">
+                        <input id="passwordInput" class="
                         @error('password')
-                            <p class="text-red-600 -mt-2 ml-2">{{ $message }}</p>
+                            outline-red-600 outline-2 outline border-none
                         @enderror
+                        border text-[16px] border-black w-[100%] px-4 py-4 rounded-lg" type="password" placeholder="Password..." name="password" id="passwordInput">
+                        <img id="passwordShowBtn" class="h-6 absolute right-6 cursor-pointer" src="{{ asset('/icon/EyeClosed.svg') }}" />
                     </div>
+                    @error('password')
+                        <p class="text-red-600 -mt-2 ml-2">{{ $message }}</p>
+                    @enderror
                     <a href="">
                         <p class="transition-colors text-[16px] ml-2 mt-2 text-blue-600 hover:text-blue-800">Forgot Password?</p>
                     </a>
-                    <script src="{{ asset('js/passwordShow.js') }}" defer></script>
                     <div class="flex justify-end mt-6">
-                        <button type="submit" class="transition-colors duration-100 bg-black hover:bg-gray-600 font-bold text-white px-6 py-2 rounded-2xl">Sign In</button>
+                        <button type="submit" id="passwordBtn" class="transition-colors duration-100 bg-black hover:bg-gray-600 font-bold text-white px-6 py-2 rounded-2xl">Sign In</button>
                     </div>
-                </form>
+                </div>
+
+                <script src="{{ asset('js/passwordShow.js') }}" defer></script>
+
+
+                <script>
+                    const passwordInputElement = document.getElementById('passwordInput')
+                    const passwordNameElement = document.getElementById('usernameInput')
+                    const passwordBtnElement = document.getElementById('passwordBtn')
+
+                    passwordBtnElement.addEventListener('click', function() {
+                        if (passwordInputElement.value == 'almer' && passwordInputElement.value == 'almer') {
+                            window.location.href = "{{ route('/')}}";
+                        } else
+                        {
+                            console.log("Invalid credentials");
+                        }
+                    });
+                </script>
             </div>
         </div>
 </x-head>

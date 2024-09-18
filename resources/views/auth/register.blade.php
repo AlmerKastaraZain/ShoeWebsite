@@ -70,13 +70,17 @@
                     </div>
                     <script src="{{ asset('js/passwordShow.js') }}" defer></script>
 
-                    <div class="flex w-[80vw] gap-4 mt-4 max-w-[600px]">
-                        <input class="" type="checkbox" name="receieve_email" id="">
-                        <label for="receive_email">mendaftarkan untuk menerima email berisi info terbaru dari Liceria tentang produk, penawara, dan manfaat anggota</label>
+                    <div class="flex w-[80vw] mt-4 max-w-[600px]">
+                        <div class="flex">
+                            <input class="w-4 -translate-y-3" type="checkbox" name="receive_email" id="">
+                        </div>
+                        <label for="receive_email" class="pl-4">Mendaftarkan untuk menerima email berisi info terbaru dari Liceria tentang produk, penawara, dan manfaat anggota</label>
                     </div>
-                    <div class="flex w-[80vw] gap-4 mt-2 max-w-[600px]">
-                        <input class="" type="checkbox" name="accept_policy" id="">
-                        <label for="accept_policy">Saya seteju dengan Liceria <a href="">Terms and Policy</a></label>
+                    <div class="flex w-[80vw] mt-2 max-w-[600px]">
+                        <div class="flex">
+                            <input class="w-4" type="checkbox" name="accept_policy" id="">
+                        </div>
+                        <label for="accept_policy" class="pl-4">Saya seteju dengan Liceria <a href="" class="underline">Terms and Policy</a></label>
                     </div>
                     @error('accept-policy')
                         <p class="text-red-600 -mt-2 ml-2">{{ $message }}</p>

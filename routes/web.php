@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('/');
 
 Route::get('/shop', [StoreController::class, 'index'])->name('shop');
 Route::get('/shop/search/', [StoreController::class, 'search'])->name('shop.search');

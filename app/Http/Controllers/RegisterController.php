@@ -23,13 +23,9 @@ class RegisterController extends Controller
             'email' => 'required|max:255|email|unique:users',
             'password' => ['same:password_confirmation', 'between:8,255', 'required', Password::defaults()],
             'password_confirmation' => 'required',
-            'accept-policy' => 'required'
         ]);
 
-        // Check if the user accepted the terms and policy
-        if ($request->accept_policy == true) {
-            # code...
-        }
+
         
         // Create a new user
         $user = User::create([
