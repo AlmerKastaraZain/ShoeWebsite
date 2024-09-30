@@ -64,7 +64,18 @@ class StoreController extends Controller
     {
         $attribute = $request->except('_token');
         $shoes = Shoe::get('*');
-        
+        if ($request->has('mens'))
+        {
+            return View('shop.mens');
+            
+        }
+
+
+        if ($request->has('kids'))
+        {
+            return View('shop.kids');
+        }
+
         return View('shop.search', ['attribute' => $attribute, 'shoes' => $shoes]);
     }
 

@@ -1,0 +1,145 @@
+
+.jdl h1 {
+  text-align: center;
+}
+
+.mengm1 {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.box-kiri {
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  height: 28rem;
+}
+
+.box-tengah {
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  height: 28rem;
+}
+
+.box-kanan {
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  height: 28rem;
+}
+
+.box-pojok {
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  height: 28rem;
+}
+
+.box-kiri button,
+.box-tengah button,
+.box-kanan button,
+.box-pojok button {
+  position: relative;
+  bottom: 6rem;
+  text-align: center;
+  margin-left: 140px;
+  height: 2rem;
+  width: 5rem;
+  background-color: #3a7ee6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.box-kiri img,
+.box-tengah img,
+.box-kanan img,
+.box-pojok img {
+  position: relative;
+  bottom: 7rem;
+  text-align: center;
+}
+
+.box-kiri h2,
+.box-tengah h2,
+.box-kanan h2,
+.box-pojok h2 {
+  position: relative;
+  bottom: 6rem;
+  text-align: center;
+}
+
+.mengm2 {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  transform: translateY(20px);
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.box-kiri2 {
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  height: 28rem;
+}
+
+.box-tengah2 {
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  height: 28rem;
+}
+
+.box-kanan2 {
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  height: 28rem;
+}
+
+.box-pojok2 {
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  height: 28rem;
+}
+
+.box-kiri2 button,
+.box-tengah2 button,
+.box-kanan2 button,
+.box-pojok2 button {
+  position: relative;
+  bottom: 6rem;
+  text-align: center;
+  margin-left: 140px;
+  height: 2rem;
+  width: 5rem;
+  background-color: #3a7ee6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.box-kiri2 img,
+.box-tengah2 img,
+.box-kanan2 img,
+.box-pojok2 img {
+  position: relative;
+  bottom: 7rem;
+  text-align: center;
+}
+
+.box-kiri2 h2,
+.box-tengah2 h2,
+.box-kanan2 h2,
+.box-pojok2 h2 {
+  position: relative;
+  bottom: 6rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 476px) {
+  .box-kiri {
+    width: 95%;
+  }
+}

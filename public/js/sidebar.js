@@ -28,4 +28,4 @@ function OpenSidebar() {
 function CloseSidebar() {
     sidebarElement.classList.add('translate-x-[100%]');
     HideBlackcover();
-}
+}   
