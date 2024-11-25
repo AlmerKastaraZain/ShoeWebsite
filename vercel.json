@@ -1,0 +1,69 @@
+{
+    "version": 2,
+    "framework": null,
+    "functions": {
+        "api/*.php": {
+            "runtime": "vercel-php@0.6.0"
+        }
+    },
+    
+    "routes": [
+        {
+            "src": "/build/(.*)",
+            "dest": "/public/build/"
+        },
+        {
+            "src": "/js/(.*)",
+            "dest": "/public/js/"
+        },
+        {
+            "src": "/css/(.*)",
+            "dest": "/public/css/"
+        },
+        {
+            "src": "/image/(.*)",
+            "dest": "/public/image/"
+        },
+        {
+            "src": "/video/(.*)",
+            "dest": "/public/video/"
+        },
+        {
+            "src": "/favicon/(.*)",
+            "dest": "/public/favicon/"
+        },
+        {
+            "src": "/icon/(.*)",
+            "dest": "/public/icon/"
+        },
+        {
+            "src": "/logo/(.*)",
+            "dest": "/public/logo/"
+        },
+        {
+            "src": "/shoeImage/(.*)",
+            "dest": "/public/shoeImage/"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "public": true,
+    "buildCommand": "vite build",
+    "outputDirectory": "public",    
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://shoe-website.vercel.app",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie"
+    }
+}
